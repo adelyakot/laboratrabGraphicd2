@@ -46,7 +46,7 @@ void main()                                                                     
 static void RenderSceneCB()
 {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA);
-    /glutInitWindowSize(1024, 768);
+    glutInitWindowSize(1024, 768);
 
     glClear(GL_COLOR_BUFFER_BIT);
 
