@@ -44,6 +44,13 @@ public:
         m_persProj.zFar = zFar;
     }
 
+    void SetCamera(const Vector3f& Pos, const Vector3f& Target, const Vector3f& Up)
+    {
+        m_camera.Pos = Pos;
+        m_camera.Target = Target;
+        m_camera.Up = Up;
+    }
+
     const Matrix4f* GetTrans();
 
 private:
@@ -64,6 +71,11 @@ private:
         float zFar;
     } m_persProj;
 
+    struct {
+        Vector3f Pos;
+        Vector3f Target;
+        Vector3f Up;
+    } m_camera;
 
     Matrix4f m_transformation;
 };

@@ -24,6 +24,14 @@ struct Vector3f
         z = _z;
     }
 
+    Vector3f Cross(const Vector3f& v) const;
+
+    Vector3f& Normalize();
+
+    void Print() const
+    {
+        printf("(%.02f, %.02f, %.02f", x, y, z);
+    }
 };
 
 class Matrix4f
@@ -60,7 +68,11 @@ public:
         return Ret;
     }
 
-   
+    void InitScaleTransform(float ScaleX, float ScaleY, float ScaleZ);
+    void InitRotateTransform(float RotateX, float RotateY, float RotateZ);
+    void InitTranslationTransform(float x, float y, float z);
+    void InitCameraTransform(const Vector3f& Target, const Vector3f& Up);
+    void InitPersProjTransform(float FOV, float Width, float Height, float zNear, float zFar);
 };
 
 
