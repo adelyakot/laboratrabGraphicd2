@@ -6,7 +6,6 @@
 #include <GL/freeglut.h>
 
 #include "pipeline.h"
-
 #define WINDOW_WIDTH 1024
 #define WINDOW_HEIGHT 768
 
