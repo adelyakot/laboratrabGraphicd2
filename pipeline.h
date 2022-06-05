@@ -64,6 +64,7 @@ private:
         float zFar;
     } m_persProj;
 
+
     Matrix4f m_transformation;
 };
 

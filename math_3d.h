@@ -1,6 +1,11 @@
 #ifndef MATH_3D_H
 #define	MATH_3D_H
 
+#include <stdio.h>
+#include <math.h>
+
+#define ToRadian(x) ((x) * 3.141593f / 180.0f)
+#define ToDegree(x) ((x) * 180.0f / 3.141593f)
 
 struct Vector3f
 {
@@ -18,12 +23,18 @@ struct Vector3f
         y = _y;
         z = _z;
     }
+
 };
 
-
-struct Matrix4f
+class Matrix4f
 {
+public:
     float m[4][4];
+
+    Matrix4f()
+    {
+    }
+
 
     inline void InitIdentity()
     {
@@ -48,8 +59,9 @@ struct Matrix4f
 
         return Ret;
     }
-};
 
+   
+};
 
 
 #endif	/* MATH_3D_H */
