@@ -1,4 +1,3 @@
-#pragma once
 #ifndef PIPELINE_H
 #define	PIPELINE_H
 
@@ -54,11 +53,6 @@ public:
     const Matrix4f* GetTrans();
 
 private:
-    void InitScaleTransform(Matrix4f& m) const;
-    void InitRotateTransform(Matrix4f& m) const;
-    void InitTranslationTransform(Matrix4f& m) const;
-    void InitPerspectiveProj(Matrix4f& m) const;
-
     Vector3f m_scale;
     Vector3f m_worldPos;
     Vector3f m_rotateInfo;
